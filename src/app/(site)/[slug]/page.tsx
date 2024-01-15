@@ -17,7 +17,7 @@ const Page = async ({ params }: PageProps) => {
       </header>
 
       {/* Content goes here */}
-      <div className="text-lg text-gray-200 mt-5">
+      <div className="text-lg text-secondary-foreground mt-5">
         <PortableText value={page.content} />
       </div>
     </>

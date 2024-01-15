@@ -4,6 +4,7 @@ export type Project = {
   _id: string;
   _createdAt: Date;
   name: string,
+  summary: string,
   slug: string,
   image: string,
   url: string,

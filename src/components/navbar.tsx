@@ -1,5 +1,6 @@
 import { getPages } from "@/sanity-utils";
 import Link from "next/link";
+import { ModeToggle } from "./mode-toggle";
 
 const Navbar = async () => {
   const pages = await getPages();
@@ -7,7 +8,7 @@ const Navbar = async () => {
   console.log(pages);
 
   return (
-    <div className="flex items-center gap-3 text-small text-gray-400">
+    <div className="flex items-center gap-3 text-small text-secondary-foreground">
       {pages.map((page) => (
         <Link className="hover:underline hover:scale-105 transition" key={page._id} href={`/${page.slug}`}>
           {page.title}
@@ -16,6 +17,7 @@ const Navbar = async () => {
       <Link className="hover:underline hover:scale-105 transition" href={`/robotics`}>
         Robotics
       </Link>
+      <ModeToggle />
     </div>
   )
 }

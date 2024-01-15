@@ -9,16 +9,21 @@ const project = {
       type: "string",
     },
     {
+      name: "summary",
+      title: "Summary",
+      type: "string"
+    },
+    {
       name: "slug",
       title: "Slug",
       type: "slug",
-      options: {source: "name"}
+      options: { source: "name" }
     },
     {
       name: "image",
       title: "Image",
       type: "image",
-      options: {hotspot: true},
+      options: { hotspot: true },
       fields: [
         {
           name: "alt",
@@ -36,7 +41,7 @@ const project = {
       name: "content",
       title: "Content",
       type: "array",
-      of: [{ type: "block"}]
+      of: [{ type: "block" }]
     }
   ]
 }
